@@ -2,4 +2,7 @@
 1 + 1;
 console.log('test');
 
-// BigInt
+// Number変換
+const s: string = 'string';
+const n: number = Number(s);
+console.log(n);  // => NaN
