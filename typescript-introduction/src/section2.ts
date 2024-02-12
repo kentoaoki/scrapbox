@@ -6,3 +6,4 @@ console.log('test');
 const s: string = 'string';
 const n: number = Number(s);
 console.log(n);  // => NaN
+
