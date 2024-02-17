@@ -4,6 +4,9 @@ const obj = {
 }
 
 console.log(obj.b, obj.c); // => 1, 2
+console.log(obj['b'], obj['c']); // => 1, 2
+// console.log(obj[b], obj[c]); // => error Cannot find name 'c'.
+
 
 const objStr = {
     'b': 1,
@@ -27,3 +30,11 @@ for (let num in objNum){
 }
 // => string
 //    string
+
+const objStrDiff = {
+    'diff name': 1,
+    if: 1
+}
+
+// console.log(objStrDiff.diff name); // => error ',' expected.
+console.log(objStrDiff['diff name']); // => 1
