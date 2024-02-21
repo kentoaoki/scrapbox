@@ -38,3 +38,38 @@ const objStrDiff = {
 
 // console.log(objStrDiff.diff name); // => error ',' expected.
 console.log(objStrDiff['diff name']); // => 1
+
+const objA = {
+    a: 1
+}
+
+const objB = [{a: 1}]
+
+console.log(JSON.stringify(objA) == JSON.stringify(objB[0]));
+
+// 型の使用
+const objType: {
+    foo: number;
+    bar: string;
+} = {
+    foo: 123,
+    bar: 'hello',
+}
+
+console.log(objType);
+// => { foo: 123, bar: 'hello' }
+
+
+// インデックスシグネチャ
+type Price = {
+    [key: string]: number;
+}
+
+const data: Price = {
+    apple: 100,
+    pc: 10000,
+}
+
+data.globe = 400;
+console.log(data);
+// => { apple: 100, pc: 10000, globe: 400 }

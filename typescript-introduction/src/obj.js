@@ -28,3 +28,20 @@ var objStrDiff = {
 };
 // console.log(objStrDiff.diff name); // => error ',' expected.
 console.log(objStrDiff['diff name']); // => 1
+var objA = {
+    a: 1
+};
+var objB = [{ a: 1 }];
+console.log(JSON.stringify(objA) == JSON.stringify(objB[0]));
+// 型の使用
+var objType = {
+    foo: 123,
+    bar: 'hello',
+};
+console.log(objType);
+var data = {
+    apple: 100,
+    pc: 10000,
+};
+data.globe = 400;
+console.log(data);
